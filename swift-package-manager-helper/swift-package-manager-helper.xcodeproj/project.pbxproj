@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		53971F66220B7B42001B5929 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53971F65220B7B42001B5929 /* Github.swift */; };
 		53971F69220B8B74001B5929 /* PackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53971F68220B8B74001B5929 /* PackageViewController.swift */; };
+		53971F6B220B9BE5001B5929 /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53971F6A220B9BE5001B5929 /* DependencyFactory.swift */; };
+		53971F6C220B9BE5001B5929 /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53971F6A220B9BE5001B5929 /* DependencyFactory.swift */; };
 		53F6C316220B719600D929F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6C315220B719600D929F6 /* AppDelegate.swift */; };
 		53F6C318220B719600D929F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6C317220B719600D929F6 /* ViewController.swift */; };
 		53F6C31A220B719800D929F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F6C319220B719800D929F6 /* Assets.xcassets */; };
@@ -38,6 +40,7 @@
 		53971F65220B7B42001B5929 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
 		53971F67220B8068001B5929 /* swift-package-manager-helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "swift-package-manager-helper.entitlements"; sourceTree = "<group>"; };
 		53971F68220B8B74001B5929 /* PackageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageViewController.swift; sourceTree = "<group>"; };
+		53971F6A220B9BE5001B5929 /* DependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
 		53F6C312220B719600D929F6 /* swift-package-manager-helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-package-manager-helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F6C315220B719600D929F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53F6C317220B719600D929F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 				53F6C317220B719600D929F6 /* ViewController.swift */,
 				53971F68220B8B74001B5929 /* PackageViewController.swift */,
 				53971F65220B7B42001B5929 /* Github.swift */,
+				53971F6A220B9BE5001B5929 /* DependencyFactory.swift */,
 				53F6C319220B719800D929F6 /* Assets.xcassets */,
 				53F6C31B220B719800D929F6 /* Main.storyboard */,
 				53F6C31E220B719800D929F6 /* Info.plist */,
@@ -281,6 +285,7 @@
 				53971F69220B8B74001B5929 /* PackageViewController.swift in Sources */,
 				53F6C318220B719600D929F6 /* ViewController.swift in Sources */,
 				53F6C316220B719600D929F6 /* AppDelegate.swift in Sources */,
+				53971F6B220B9BE5001B5929 /* DependencyFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53F6C329220B719800D929F6 /* swift_package_manager_helperTests.swift in Sources */,
+				53971F6C220B9BE5001B5929 /* DependencyFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

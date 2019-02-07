@@ -22,7 +22,7 @@ struct Repository: Codable {
     var stars: Double
     
     enum CodingKeys: String, CodingKey {
-        case name = "name"
+        case name = "full_name"
         case url = "clone_url"
         case stars = "stargazers_count"
     }

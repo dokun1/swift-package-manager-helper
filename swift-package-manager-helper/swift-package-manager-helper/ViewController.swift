@@ -30,6 +30,8 @@ class ViewController: NSViewController {
     }
     
     private func send(_ query: String) {
+        latestResults = nil
+        resultsTableView?.reloadData()
         searchButton?.isEnabled = false
         searchButton?.title = "Searching..."
         Github.search(for: query) { repositories, error in
@@ -48,8 +50,7 @@ class ViewController: NSViewController {
             guard let controller = segue.destinationController as? PackageViewController else {
                 return
             }
-            
-            controller.packageString = repository.url
+            controller.repository = repository
         }
     }
 }
@@ -69,7 +70,7 @@ extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
             result.textField?.stringValue = repository.name
             return result
         } else {
-            result.textField?.stringValue = "\(repository.stars)"
+            result.textField?.stringValue = "\(String(format: "%.0f", repository.stars))"
             return result
         }
     }
