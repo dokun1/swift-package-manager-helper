@@ -214,6 +214,7 @@
 				TargetAttributes = {
 					53F6C311220B719600D929F6 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -463,7 +464,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.okun.io.swift-package-manager-helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -482,7 +483,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.okun.io.swift-package-manager-helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

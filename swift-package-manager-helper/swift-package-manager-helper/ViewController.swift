@@ -23,10 +23,9 @@ class ViewController: NSViewController {
     }
     
     @IBAction func searchButtonClicked(sender: Any) {
-        guard let query = searchField?.stringValue else {
-            return
+        if let query = searchField?.stringValue {
+            send(query)
         }
-        send(query)
     }
     
     private func send(_ query: String) {
@@ -37,6 +36,15 @@ class ViewController: NSViewController {
         Github.search(for: query) { repositories, error in
             self.searchButton?.isEnabled = true
             self.searchButton?.title = "Search"
+            guard let repositories = repositories else {
+                if let error = error {
+                    let alert = NSAlert(error: error)
+                    alert.alertStyle = .warning
+                    alert.addButton(withTitle: "OK")
+                    alert.runModal()
+                }
+                return
+            }
             self.latestResults = repositories
             self.resultsTableView?.reloadData()
         }
@@ -67,7 +75,7 @@ extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
         let repository = repositories[row]
         let result = tableView.makeView(withIdentifier: (tableColumn?.identifier)!, owner: self) as! NSTableCellView
         if (tableColumn?.identifier)!.rawValue == "repositoryNameColumn" {
-            result.textField?.stringValue = repository.name
+            result.textField?.stringValue = repository.fullName
             return result
         } else {
             result.textField?.stringValue = "\(String(format: "%.0f", repository.stars))"
