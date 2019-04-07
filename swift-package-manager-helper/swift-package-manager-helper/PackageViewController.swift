@@ -34,6 +34,7 @@ class PackageViewController: NSViewController {
     @IBOutlet private var textFieldGitRevision: NSTextField?
     
     @IBOutlet private var packageStringResult: NSTextField?
+    @IBOutlet private var releasesResult: NSTextField?
     
     @IBOutlet private var copyButton: NSButton?
 
@@ -46,6 +47,23 @@ class PackageViewController: NSViewController {
         super.viewWillAppear()
         currentTextField = textFieldFrom
         attemptPackageStringUpdate()
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        guard let repository = repository else {
+            return
+        }
+        Github.getReleases(for: repository) { releases, error in
+            if let releases = releases {
+                var releaseString = "Versions: "
+                for release in releases {
+                    releaseString.append("\(release.name), ")
+                }
+                let versionsString = String(releaseString.dropLast().dropLast())
+                self.releasesResult?.stringValue = versionsString
+            }
+        }
     }
     
     @IBAction func radioButtonChanged(_ sender: AnyObject) {
